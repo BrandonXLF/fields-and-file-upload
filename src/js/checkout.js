@@ -14,12 +14,12 @@ jQuery($ => {
         function onChange() {
             hiddenInput.value = uploadInput.files.length || '';
             uploadInput.dataset.processed = '';
-            clearFileButton.classList.toggle('cffu-clear-file-active', uploadInput.files.length);
+            clearFileButton?.classList.toggle('cffu-clear-file-active', uploadInput.files.length);
         }
 
         uploadInput.addEventListener('change', onChange);
         
-        clearFileButton.addEventListener('click', e => {
+        clearFileButton?.addEventListener('click', e => {
             e.preventDefault();
             uploadInput.value = null;
             onChange();
